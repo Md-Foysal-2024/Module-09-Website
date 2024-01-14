@@ -43,6 +43,10 @@ nav li {
     font-size: 1rem;
 }
 
+.text-light-gray {
+    color: #424242;
+}
+
 nav li a {
     text-decoration: none;
     color: #424242;
@@ -86,38 +90,43 @@ nav li a {
 
 /* main section styles */
 
-main{
+main {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 
 /* teams styles */
 
-.teams-container{
+.teams-container {
+
     display: flex;
     align-items: center;
+    margin: 0px auto;
 }
 
-.teams-img-container{
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1.5rem;
+.teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
-.teams-content{
-    padding:0px 70px ;
+
+.teams-content {
+    padding: 0px 70px;
 
 }
-.teams-title{
+
+.teams-title {
     font-size: 2.8rem;
 }
 
-.teams-title .quick-list{color: #727272;
-font-weight: 500;
+.teams-title .quick-list {
+    color: #727272;
+    font-weight: 500;
 }
 
-.features{
-  color: #FF900E;
-  font-weight: 700;  
+.features {
+    color: #FF900E;
+    font-weight: 700;
 }
 
 
@@ -129,7 +138,6 @@ font-weight: 500;
 
 
 
-/* class- 9.4 ----> 6:44 */
 
 
 
@@ -143,41 +151,8 @@ font-weight: 500;
 
 
 
+/*-------------------- Responsive media query --------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive media query */
- 
 /* 2.Tab or Medium device */
 @media screen and (min-width:576px) and (max-width:992px) {
 
@@ -189,6 +164,22 @@ font-weight: 500;
         flex-direction: column;
     }
 
+    .teams-container {
+        flex-direction: column-reverse;
+    }
+
+    .teams-content {
+        text-align: center;
+        margin-bottom: 2.8rem;
+    }
+
+    .teams-img-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
 }
 
 
@@ -198,12 +189,21 @@ font-weight: 500;
         padding: 20px;
     }
 
-    nav {
+    nav,
+    .teams-container {
         flex-direction: column;
+    }
+
+    .teams-content {
+        text-align: center;
+    }
+
+    .teams-img-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     nav>ul {
         flex-direction: column;
     }
 }
-
